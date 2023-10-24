@@ -1,0 +1,61 @@
+<div class="container col-md-8 text-center" style="margin-bottom:100px">
+    <table>
+        <tr>
+            <th colspan="6" class="h1 text-uppercase text-success">
+                Car List
+            </th>
+            <th>
+                <a class="btn btn-primary" href="/car/add">Add</a>
+            </th>
+            <th colspan="2">
+                <form action="/car/search" method="post">
+                    <div class="form-group">
+                        <input class="form-control" type="search" placeholder="Search" name="name">
+                    </div>
+                </form>
+            </th>
+            <th colspan="2">
+                <select class="form-control" name="sort" id="" onchange="window.location.href=this.value">
+                    <option value="">Sort by</option>
+                    <option value="/car/admin/priceasc">Sort by price</option>
+                    <option value="/car/admin/quantityasc">Sort by quantity</option>
+                </select>
+            </th>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <th>Material</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Description</th>
+            <th>Image</th>
+            <th>Menu</th>
+        </tr>
+        {{#each car }}
+        <tr>
+            <td>{{ name }}</td>
+            <td>{{ material }}</td>
+            <td class="price-cell">{{ price }}</td>
+            <td>{{ quantity }}</td>
+            <td>{{ description }}</td>
+            <td>
+                <a href="/car/detail/{{_id}}"> <img src="{{image}}" width="150" height="150"></a>
+            </td>
+            <td>
+                <a class="btn btn-warning" href="/car/edit/{{_id}}">Edit</a>
+                <a class="btn btn-danger" href="/car/delete/{{_id}}"
+                onclick="return confirm('Are you sure to delete this car?');">Delete</a>
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+</div>
+<style>
+.price-cell::before {
+    content: "$ "; /* Thêm ký hiệu tiền tệ "$" và một khoảng trắng */
+    color: green; /* Màu sắc của ký hiệu tiền tệ */
+    font-weight: bold; /* Độ đậm của ký hiệu tiền tệ */
+}
+
+
+</style>

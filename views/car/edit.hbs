@@ -1,0 +1,46 @@
+<form action="/car/edit/{{car._id}}" method="post" class="container col-md-8 card">
+    <h1 class="text-danger text-center">Edit Car</h1>
+    <div class="form-group mt-3">
+        <label for="name" class="text-primary">Name</label>
+        <input class="form-control" type="text" name="name" id="name" required minlength="3" maxlength="30" value="{{car.name}}">
+    </div>
+    <div class="form-group mt-3">
+        <label for="price" class="text-primary">Price</label>
+        <input class="form-control" type="number" name="price" id="price" required min="0" value="{{car.price}}">
+    </div>
+    <div class="form-group mt-3">
+        <label for="endow" class="text-primary">Endowment</label>
+        <input class="form-control" type="text" name="endow" id="endow" value="{{car.endow}}">
+    </div>
+    <div class="form-group mt-3">
+        <label for="insurance" class="text-primary">Insurance</label>
+        <input class="form-control" type="text" name="insurance" id="insurance" value="{{car.insurance}}">
+    </div>
+    <div class="form-group mt-3">
+        <label for="transport" class="text-primary">Transport</label>
+        <input class="form-control" type="text" name="transport" id="transport" value="{{car.transport}}">
+    </div>
+    <div class="form-group mt-3">
+        <label for="sectors" class="text-primary">Sectors</label>
+        <input class="form-control" type="text" name="sectors" id="sectors" value="{{car.sectors}}">
+    </div>
+    <div class="form-group mt-3">
+        <label for="version" class="text-primary">Version</label>
+        <input class="form-control" type="text" name="version" id="version" value="{{car.version}}">
+    </div>
+    <div class="form-group mt-3">
+        <label for="quantity" class="text-primary">Quantity</label>
+        <input class="form-control" type="number" name="quantity" id="quantity" required min="0" value="{{car.quantity}}">
+    </div>
+    <div class="form-group mt-3">
+        <label for="description" class="text-primary">Description</label>
+        <input class="form-control" type="text" name="description" id="description" required value="{{car.description}}">
+    </div>
+    <div class="form-group mt-3">
+        <label for="image" class="text-primary">Image URL</label>
+        <input class="form-control" type="url" name="image" id="image" required value="{{car.image}}">
+    </div>
+    <div class="form-group mt-3 mb-4 text-center">
+        <input class="btn btn-primary" type="submit" value="Edit">
+    </div>
+</form>

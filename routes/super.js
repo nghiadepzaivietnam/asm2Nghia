@@ -53,14 +53,14 @@ router.post('/search', async (req, res) => {
   res.render('super/index', { super: superData });
 });
 
-router.get('/super', async (req, res) => {
+router.get('/admin/priceasc', async (req, res) => {
   var superData = await SuperModel.find().sort({ price: 1 });
-  res.render('super', { super: superData });
+  res.render('super/admin', { super: superData });
 });
 
-router.get('/super', async (req, res) => {
-  var superData = await SuperModel.find().sort({ price: -1 });
-  res.render('super', { super: superData });
+router.get('/admin/quantityasc', async (req, res) => {
+  var superData = await SuperModel.find().sort({quantity:1});
+  res.render('super/admin', { super: superData });
 });
 
 module.exports = router;

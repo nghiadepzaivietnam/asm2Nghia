@@ -57,5 +57,75 @@
     font-weight: bold; /* Độ đậm của ký hiệu tiền tệ */
 }
 
+<style>
+    .container table {
+        border-collapse: collapse;
+        width: 100%;
+    }
 
+    .container table, .container th, .container td {
+        border: 1px solid #ddd; /* Đường viền xám cho bảng */
+    }
+
+    .container th, .container td {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .container th {
+        background-color: #f2f2f2; /* Màu nền xám cho tiêu đề cột */
+    }
+
+    .container th, .container td a {
+        text-decoration: none; /* Loại bỏ gạch chân trên liên kết */
+        color: #007bff; /* Màu cho liên kết */
+    }
+
+    .container th a.btn-primary {
+        background-color: #007bff; /* Màu nền xanh cho nút "Add" */
+        color: #fff;
+    }
+
+    .container th a.btn-primary:hover {
+        background-color: #0056b3; /* Màu nền xanh tối cho nút "Add" khi di chuột vào */
+    }
+
+    .container th select, .container th input[type="search"] {
+        width: 100%;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .price-cell::before {
+        content: "$ "; /* Thêm ký hiệu tiền tệ "$" và một khoảng trắng */
+        color: green; /* Màu sắc của ký hiệu tiền tệ */
+        font-weight: bold; /* Độ đậm của ký hiệu tiền tệ */
+    }
+        /* CSS cho nút "Add" */
+    .container th a.btn-primary {
+        background-color: #007bff;
+        color: #fff;
+        padding: 5px 10px;
+        margin-right: 10px; /* Tạo khoảng cách với nút "Delete" */
+        border-radius: 5px;
+        text-decoration: none;
+    }
+
+    .container th a.btn-primary:hover {
+        background-color: #0056b3;
+    }
+
+    /* CSS cho nút "Delete" */
+    .container th a.btn-danger {
+        background-color: #dc3545;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+
+    .container th a.btn-danger:hover {
+        background-color: #c82333;
+    }
 </style>

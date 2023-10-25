@@ -2,7 +2,6 @@ var express = require('express');
 var router = express.Router();
 // const CarModel=require('../models/CarModel');
 var CarModel = require('../models/CarModel');
-var SuperModel = require('../models/SuperModel');
 
 // Get homePAGE
 router.get('/', async (req,res) => {
